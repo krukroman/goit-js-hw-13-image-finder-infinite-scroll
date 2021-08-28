@@ -15,7 +15,7 @@ const onTopBtn = new OnTopBtn({
 });
 
 const setntinelObserver = new IntersectionObserver(onInfiniteScroll, {
-  rootMargin: '100px',
+  rootMargin: '70px',
 });
 
 const searchFormObserver = new IntersectionObserver(enableOnTopBtn, {

@@ -2,9 +2,10 @@
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
+  padding-inline: 5px;
   max-width: 1200px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
   grid-auto-rows: 290px;
   grid-gap: 24px;
   align-items: center;
