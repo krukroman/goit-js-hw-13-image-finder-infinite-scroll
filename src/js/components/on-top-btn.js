@@ -1,14 +1,13 @@
 export default class OnTopBtn {
   constructor({ selector, hidden = false }) {
-    this.selector = selector;
-    this.refs = this.getRefs(this.selector);
+    this.refs = this.getRefs(selector);
 
     hidden && this.hide();
   }
 
-  getRefs() {
+  getRefs(selector) {
     const refs = {
-      button: document.querySelector(this.selector),
+      button: document.querySelector(selector),
     };
 
     return refs;

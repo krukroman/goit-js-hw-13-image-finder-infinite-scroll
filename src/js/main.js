@@ -2,6 +2,7 @@ import API from './api-service/api-service';
 import getRefs from './components/get-refs';
 import searchFormTmp from '../templates/search-form.hbs';
 import galleryTmp from '../templates/gallery';
+import pageInit from './components/page-init';
 import OnTopBtn from './components/on-top-btn';
 import notify from './components/notify';
 import createModal from './components/lightbox';
@@ -22,7 +23,7 @@ const searchFormObserver = new IntersectionObserver(enableOnTopBtn, {
   rootMargin: '800px',
 });
 
-pageInit();
+pageInit(refs.searchForm, searchFormTmp());
 
 refs.searchForm.addEventListener('submit', onSearch);
 onTopBtn.refs.button.addEventListener('click', onToTopBtnClick);
@@ -30,10 +31,6 @@ refs.gallery.addEventListener('click', openModal);
 
 setntinelObserver.observe(refs.sentinel);
 searchFormObserver.observe(refs.searchForm);
-
-function pageInit() {
-  return refs.searchForm.insertAdjacentHTML('beforeend', searchFormTmp());
-}
 
 function onSearch(e) {
   e.preventDefault();
